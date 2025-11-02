@@ -1,0 +1,924 @@
+DOCTYPE html>
+<!-- saved from url=(0044)https://career-guidance-webs-utzs.bolt.host/ -->
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"content="MyCareerCompass,Career Guidance,Career Test,Job Matchting,Skills Assessment,South African Careers,Career Finder,Career Advice,Personality Quiz,Epxlore Careers,Future Jobs,Highest Paying Jobs,Job Descriptions,Career Path,Entry-level career advice, Income potential,Best careers ,Discover your path,Free resource"
+   <title> MyCareerCompass - Navigate Your Future, Confidently.</title>
+ <link href="./MyCareerCompass_files/css2" rel="stylesheet">
+<style>
+        
+        :root {
+            --color-dark-bg:  #01080e ;
+            --color-dark-surface: #0d0d42fa;
+            --color-neon: hsl(202, 51%, 67%); 
+            --color-neon-magenta: #df4f97; 
+            --color-text-light: #ffffff;
+            --color-text-grey: #faf2f2;
+            --color-border-dark: #696ba7;
+        }
+
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-dark-bg);
+            color: var(--color-text-light);
+            min-height: 100vh;
+        }
+        
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 50px 50px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        
+        .header {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--color-border-dark);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-brand h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: var(--color-neon-aqua);
+            text-shadow: 0 0 5px var(--color-neon-aqua);
+        }
+
+        .nav-brand span {
+            display: block;
+            font-size: 0.7em;
+            color: var(--color-text-grey);
+            opacity: 0.8;
+            margin-top: -5px;
+        }
+
+        
+        .main-content-split {
+            display: flex;
+            padding-top: 20px;
+            min-height: calc(100vh - 80px); 
+        }
+        
+       
+        .quiz-section {
+            flex: 0 0 350px; 
+            padding: 20px;
+            background-color: var(--color-dark-surface);
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 0 15px rgba(0, 230, 230, 0.1);
+            position: sticky;
+            top: 20px; 
+            height: fit-content;
+        }
+        
+        .quiz-section h2 {
+            font-size: 1.5em;
+            color: var(--color-neon-aqua);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--color-neon-aqua);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        
+        .careers-section {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+    
+        .input-group label {
+            display: block;
+            font-weight: 400;
+            margin-bottom: 5px;
+            color: var(--color-text-grey);
+            font-size: 0.9em;
+        }
+
+        .tag-input, .text-input, #searchInput {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--color-border-dark);
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+            background-color: #333652;
+            color: var(--color-text-light);
+            transition: border-color 0.3s;
+        }
+        
+        .tag-input:focus, .text-input:focus, #searchInput:focus {
+            border-color: var(--color-neon-aqua);
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 230, 230, 0.5);
+        }
+        
+        
+        .tag-suggestions {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag-suggestion {
+            background-color: var(--color-dark-bg);
+            color: var(--color-neon-aqua);
+            border: 1px solid var(--color-neon-aqua);
+            padding: 4px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.2s;
+        }
+        
+        .tag-suggestion:hover {
+            background-color: var(--color-neon-aqua);
+            color: var(--color-dark-bg);
+            box-shadow: 0 0 8px var(--color-neon-aqua);
+        }
+        .quiz-submit-btn {
+            background-color: rgb(255,6,6);
+            color: var(--color-text-light);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        .quiz-submit-btn:hover {
+            background-color:red; 
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+        }
+
+        
+        #recommendationHeading {
+            color: blue;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-shadow: 0 0 3px rgba(0, 230, 230, 0.5);
+        }
+        
+        #allCareersHeading h2 {
+            color: var(--color-text-light);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .category-filters {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-border-dark);
+            color: var(--color-text-grey);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-neon-aqua);
+            color: var(--color-dark-bg);
+            border-color: var(--color-neon-aqua);
+            box-shadow: 0 0 8px rgba(0, 230, 230, 0.5);
+        }
+
+        
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .career-card {
+            background-color: var(--color-dark-surface);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+            border: 1px solid var(--color-border-dark);
+            border-left: 5px solid var(--card-color-1); 
+        }
+
+        .career-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(var(--card-rgb), 0.5); 
+            border-color: var(--card-color-1);
+        }
+
+        .career-card-header {
+            display: grid;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .career-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+
+        .career-card-header h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--card-color-1);
+            text-shadow: 0 0 3px rgba(var(--card-rgb), 0.5);
+        }
+
+        .career-description {
+            font-size: 0.9em;
+            color: var(--color-text-grey);
+            margin-bottom: 15px;
+            min-height: 40px;
+        }
+
+        .career-tags {
+            display: grid;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+            min-height: 20px;
+        }
+
+        .career-tag {
+            background-color: var(--color-dark-bg);
+            color: var(--color-text-grey);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            border: 1px solid var(--color-border-dark);
+            white-space: nowrap;
+        }
+
+        .salary-range {
+            font-weight: bold;
+            color: var(--color-neon-magenta);
+            font-size: 0.9em;
+            border-top: 1px dashed var(--color-border-dark);
+            padding-top: 10px;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            border: 1px dashed var(--color-neon-magenta);
+            border-radius: 8px;
+            margin-top: 20px;
+            background-color: rgba(255, 0, 128, 0.05);
+        }
+
+        
+        .career-detail {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95); 
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            padding: 40px;
+        }
+        
+        .career-detail.active {
+            transform: translateX(0);
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: var(--color-neon-aqua);
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 20px;
+            padding: 0;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .back-btn:hover {
+            color: var(--color-neon-magenta);
+        }
+
+        .detail-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .career-header {
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            color: var(--color-text-light);
+            border: 2px solid var(--header-color-1);
+            background: var(--color-dark-surface);
+            box-shadow: 0 0 10px rgba(var(--header-rgb-1), 0.7);
+        }
+
+        .career-header h1 {
+            font-size: 2.5em;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: var(--header-color-1);
+        }
+
+        .career-header p {
+            font-size: 1.1em;
+            color: var(--color-text-grey);
+        }
+
+        .career-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: var(--color-dark-surface);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border-dark);
+        }
+
+        .info-card h3 {
+            color: var(--color-neon-aqua);
+            font-size: 1.2em;
+            margin-top: 0;
+            border-bottom: 1px solid var(--color-neon-magenta);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .info-card li::before {
+            content: '>>';
+            color: var(--color-neon-magenta);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+
+        
+        @media (max-width: 1000px) {
+            .main-content-split {
+                flex-direction: column;
+            }
+            
+            .quiz-section {
+                flex: 0 0 auto;
+                width: auto;
+                margin-right: 0;
+                margin-bottom: 20px;
+                position: relative;
+                top: auto;
+                padding: 15px;
+            }
+            
+            .careers-section {
+                padding: 10px;
+            }
+            
+            .career-info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .career-detail {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>MyCareerCompass</h1>
+                <span>Nvaigate your future, Confidently</span>
+            </div>
+            </nav>
+    </header>
+
+    <main class="container main-content-split">
+        <section class="quiz-section" id="quizSection">
+            <h2>> INITIALIZE GUIDANCE PROTOCOL</h2>
+            
+            <form class="quiz-form" id="careerQuizForm">
+                <p style="color: var(--color-neon-aqua); font-size: 0.9em; margin-bottom: 20px;">
+                    Input core skills and fields of interest (Keywords will initiate the search)
+                </p>
+
+                <div class="input-group">
+                    <label for="interestInput">:: FIELDS OF INTEREST (e.g., Finance, Design, Research)</label>
+                    <input type="text" id="interestInput" class="tag-input" placeholder="Type interest keywords separated by commas...">
+                    <div class="tag-suggestions" id="interestSuggestions">
+                        <span class="tag-suggestion" data-tag="Technology">Technology</span>
+                        <span class="tag-suggestion" data-tag="Healthcare">Healthcare</span>
+                        <span class="tag-suggestion" data-tag="Creativity">Creativity</span>
+                        <span class="tag-suggestion" data-tag="Problem Solving">Problem Solving</span>
+                    </div>
+                </div>
+
+                <div class="input-group" style="margin-top: 20px;">
+                    <label for="skillsInput">:: CORE SKILLS (e.g., Programming, Communication, Analysis)</label>
+                    <input type="text" id="skillsInput" class="tag-input" placeholder="Type skill keywords separated by commas...">
+                    <div class="tag-suggestions" id="skillsSuggestions">
+                        <span class="tag-suggestion" data-tag="Programming">Programming</span>
+                        <span class="tag-suggestion" data-tag="Leadership">Leadership</span>
+                        <span class="tag-suggestion" data-tag="Analysis">Analysis</span>
+                        <span class="tag-suggestion" data-tag="Design">Design</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="quiz-submit-btn">RUN CAREER MATCHING ALGORITHM</button>
+            </form>
+            
+            <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid var(--color-border-dark);">
+                 <label for="searchInput" style="color: var(--color-text-grey); font-size: 0.9em;">:: DIRECT QUERY (Search Title/Keywords)</label>
+                 <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Doctor, Software Engineer, Data..." spellcheck="false">
+                 </div>
+            </div>
+        </section>
+
+        <section class="careers-section" id="careersListSection">
+            <h2 id="recommendationHeading" style="display: none;">🎯 Personalized Career Recommendations</h2>
+            
+            <div id="allCareersHeading">
+                <h2 style="color:blue;">:: CAREER DATABASE INDEX</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Data Packets</button>
+                    <button class="filter-btn" data-category="healthcare">Healthcare</button>
+                    <button class="filter-btn" data-category="technology">Technology</button>
+                    <button class="filter-btn" data-category="business">Business / Finance</button>
+                    <button class="filter-btn" data-category="engineering">Engineering / Design</button>
+                    <button class="filter-btn" data-category="creative">Creative Arts</button>
+                </div>
+            </div>
+
+            <div id="careersContainer" class="careers-grid">
+                </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <h3>// ERROR: NO MATCHING DATA FOUND</h3>
+                <p>Try refining your keywords or clearing the filter.</p>
+            </div>
+        </section>
+    </main>
+
+    <section class="career-detail" id="careerDetailSection" style="display: none;">
+        <div class="detail-content">
+            </div>
+    </section>
+
+    <footer class="footer">
+        </footer>
+
+    <script>
+        
+        const careersData = [
+            { id: 'doctor', title: 'Medical Doctor', category: 'healthcare', icon: '🩺', description: 'Diagnose and treat illnesses, injuries, and medical conditions to improve patient health.', tags: ['Medicine', 'Patient Care', 'Surgery', 'Science', 'Helping People'], salaryRange: 'R800,000 - R2,500,000/year', requirements: ['Bachelor of Medicine and Bachelor of Surgery (MBChB) - 6 years', 'Complete internship (2 years)', 'Community service (1 year)'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'University of Pretoria'], subjects: ['Mathematics (70% +)', 'Physical Sciences (70% +)', 'Life Sciences (70% +)'], careerPath: ['Complete MBChB degree', 'Complete internship', 'Register with HPCSA'], workEnvironment: 'Hospitals, clinics, private practice' },
+            { id: 'software-engineer', title: 'Software Engineer', category: 'technology', icon: '💻', description: 'Design, develop, and maintain software applications and systems.', tags: ['Programming', 'Problem Solving', 'Innovation', 'Technology', 'Design'], salaryRange: 'R350,000 - R1,200,000/year', requirements: ['B.Sc. in Computer Science (3-4 years)', 'B.Eng. in Computer Engineering'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'University of Pretoria'], subjects: ['Mathematics (70% +)', 'Physical Sciences (Recommended)', 'Information Technology'], careerPath: ['Study Computer Science', 'Build programming portfolio', 'Start as junior developer'], workEnvironment: 'Tech companies, banks, startups, remote work' },
+            { id: 'teacher', title: 'Teacher', category: 'education', icon: '👨‍🏫', description: 'Educate and inspire students across various subjects and grade levels.', tags: ['Education', 'Leadership', 'Communication', 'Helping People', 'Training'], salaryRange: 'R200,000 - R500,000/year', requirements: ['Bachelor of Education (BEd) - 4 years', 'Bachelor\'s degree + PGCE'], universities: ['University of Cape Town (UCT)', 'University of Pretoria', 'Rhodes University'], subjects: ['Two teaching subjects (60% +)', 'English (50% +)'], careerPath: ['Study BEd', 'Complete teaching practice', 'Register with SACE'], workEnvironment: 'Public schools, private schools, tutoring centers' },
+            { id: 'engineer', title: 'Engineer', category: 'engineering', icon: '⚙️', description: 'Design, build, and maintain infrastructure, machines, and systems.', tags: ['Problem Solving', 'Design', 'Technical', 'Science', 'Maths'], salaryRange: 'R400,000 - R1,500,000/year', requirements: ['Bachelor of Engineering (BEng) - 4 years', 'Professional registration with ECSA'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'Stellenbosch University'], subjects: ['Mathematics (70% +)', 'Physical Sciences (70% +)'], careerPath: ['Study engineering degree', 'Gain professional experience', 'Register as professional engineer'], workEnvironment: 'Engineering firms, construction companies, manufacturing' },
+            { id: 'accountant', title: 'Chartered Accountant', category: 'business', icon: '📊', description: 'Manage financial records, auditing, and provide financial advice to businesses.', tags: ['Finance', 'Analysis', 'Compliance', 'Business', 'Maths'], salaryRange: 'R300,000 - R1,800,000/year', requirements: ['BCom + PGDA', 'Complete SAICA articles (3-5 years)'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'University of Pretoria'], subjects: ['Mathematics (60% +)', 'Accounting (70% +)'], careerPath: ['Study BCom Accounting', 'Complete articles', 'Pass SAICA board exams'], workEnvironment: 'Accounting firms, corporates, banks, consulting' },
+            { id: 'lawyer', title: 'Lawyer', category: 'business', icon: '⚖️', description: 'Provide legal advice, represent clients, and practice law in various specializations.', tags: ['Legal', 'Advocacy', 'Research', 'Communication', 'Justice'], salaryRange: 'R250,000 - R2,000,000/year', requirements: ['Bachelor of Laws (LLB) - 4 years', 'Complete articles of clerkship (2 years)'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'Stellenbosch University'], subjects: ['English (70% +)', 'History (Recommended)'], careerPath: ['Study LLB degree', 'Pass admission exams', 'Register as attorney or advocate'], workEnvironment: 'Law firms, corporate legal departments, courts' },
+            { id: 'nurse', title: 'Professional Nurse', category: 'healthcare', icon: '👩‍⚕️', description: 'Provide patient care, administer treatments, and support healthcare teams.', tags: ['Patient Care', 'Medical', 'Compassion', 'Helping People', 'Healthcare'], salaryRange: 'R200,000 - R600,000/year', requirements: ['Diploma in Nursing (3 years)', 'Bachelor of Nursing Science (4 years)', 'Register with SANC'], universities: ['University of Cape Town (UCT)', 'University of Pretoria', 'Nelson Mandela University'], subjects: ['Mathematics (50% +)', 'Physical Sciences (50% +)'], careerPath: ['Apply for nursing program', 'Complete training', 'Register with SANC'], workEnvironment: 'Hospitals, clinics, community health, schools' },
+            { id: 'graphic-designer', title: 'Graphic Designer', category: 'creative', icon: '🎨', description: 'Create visual content for brands, websites, print media, and digital platforms.', tags: ['Design', 'Creativity', 'Visual Communication', 'Technology', 'Art'], salaryRange: 'R180,000 - R600,000/year', requirements: ['BFA (3-4 years)', 'Diploma in Graphic Design', 'Strong portfolio'], universities: ['UCT (Michaelis School)', 'Vega School', 'Red & Yellow Creative School'], subjects: ['Visual Arts (60% +)', 'English (60% +)'], careerPath: ['Study design or fine arts', 'Gain experience through internships', 'Start as junior designer'], workEnvironment: 'Design agencies, advertising firms, corporate marketing, freelance' },
+            { id: 'psychologist', title: 'Psychologist', category: 'healthcare', icon: '🧠', description: 'Study human behavior and provide mental health services and therapy.', tags: ['Mental Health', 'Research', 'Counseling', 'Healthcare', 'Helping People'], salaryRange: 'R300,000 - R800,000/year', requirements: ['Master\'s in Psychology (2 years)', 'Internship and registration with HPCSA'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'Rhodes University'], subjects: ['English (70% +)', 'Mathematics (60% +)'], careerPath: ['Study Bachelor and Honours', 'Apply for Master\'s program', 'Complete internship'], workEnvironment: 'Private practice, hospitals, schools, NGOs, research' },
+            { id: 'data-scientist', title: 'Data Scientist', category: 'technology', icon: '📊', description: 'Analyze complex data to help organizations make informed business decisions.', tags: ['Analytics', 'Machine Learning', 'Statistics', 'Technology', 'Maths'], salaryRange: 'R450,000 - R1,500,000/year', requirements: ['Bachelor\'s in Mathematics, Statistics, or Computer Science', 'Master\'s in Data Science (Recommended)'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'Stellenbosch University'], subjects: ['Mathematics (80% +)', 'Physical Sciences (70% +)'], careerPath: ['Excel in mathematics', 'Study relevant degree', 'Learn programming languages'], workEnvironment: 'Tech companies, banks, retail, healthcare, consulting' },
+            { id: 'architect', title: 'Architect', category: 'engineering', icon: '🏗️', description: 'Design buildings and structures that are functional, safe, and aesthetically pleasing.', tags: ['Design', 'Construction', 'Planning', 'Engineering', 'Creativity'], salaryRange: 'R350,000 - R1,200,000/year', requirements: ['Bachelor of Architecture (5 years)', 'Register with SACAP'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'University of Pretoria'], subjects: ['Mathematics (60% +)', 'Physical Sciences (60% +)', 'Visual Arts (Recommended)'], careerPath: ['Study Bachelor of Architecture', 'Complete practical training', 'Register with SACAP'], workEnvironment: 'Architectural firms, construction companies, government' },
+            { id: 'marketing-manager', title: 'Marketing Manager', category: 'business', icon: '📈', description: 'Develop and implement marketing strategies to promote products and services.', tags: ['Strategy', 'Communication', 'Brand Management', 'Business', 'Creativity'], salaryRange: 'R400,000 - R1,200,000/year', requirements: ['BCom in Marketing', 'BBA', 'Digital marketing skills'], universities: ['University of Cape Town (UCT)', 'University of the Witwatersrand (Wits)', 'Stellenbosch University'], subjects: ['English (70% +)', 'Mathematics (60% +)'], careerPath: ['Study commerce or business degree', 'Gain marketing experience', 'Advance to management positions'], workEnvironment: 'Corporations, marketing agencies, startups, consulting' }
+        ];
+
+        
+        const searchInput = document.getElementById('searchInput');
+        const careersContainer = document.getElementById('careersContainer');
+        const noResults = document.getElementById('noResults');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const careersListSection = document.getElementById('careersListSection');
+        const careerDetailSection = document.getElementById('careerDetailSection');
+        const careerQuizForm = document.getElementById('careerQuizForm');
+        const interestInput = document.getElementById('interestInput');
+        const skillsInput = document.getElementById('skillsInput');
+        const interestSuggestions = document.getElementById('interestSuggestions');
+        const skillsSuggestions = document.getElementById('skillsSuggestions');
+        const recommendationHeading = document.getElementById('recommendationHeading');
+        const allCareersHeading = document.getElementById('allCareersHeading');
+        const mainContentSplit = document.querySelector('.main-content-split');
+
+
+        
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCareers(careersData);
+            setupEventListeners();
+        });
+
+        
+        function setupEventListeners() {
+            
+            searchInput.addEventListener('input', handleSearch);
+            
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', handleFilter);
+            });
+            
+            
+            careerQuizForm.addEventListener('submit', handleQuizSubmit);
+
+            
+            [interestSuggestions, skillsSuggestions].forEach(container => {
+                container.querySelectorAll('.tag-suggestion').forEach(tag => {
+                    tag.addEventListener('click', function() {
+                        const inputElement = this.closest('.input-group').querySelector('.tag-input');
+                        const newTag = this.dataset.tag;
+                        
+                        let currentValue = inputElement.value.trim();
+                        if (currentValue && !currentValue.endsWith(',')) {
+                            currentValue += ',';
+                        }
+                        
+                        const tagsArray = currentValue.split(/[\s,]+/).filter(t => t.length > 0).map(t => t.toLowerCase());
+                        if (!tagsArray.includes(newTag.toLowerCase())) {
+                            inputElement.value = (currentValue.endsWith(',') || !currentValue) ? currentValue + newTag : currentValue + ', ' + newTag;
+                        }
+                    });
+                });
+            });
+        }
+        
+       
+        function handleQuizSubmit(event) {
+            event.preventDefault();
+
+            const interests = interestInput.value.toLowerCase().split(/[\s,]+/).filter(t => t.length > 0);
+            const skills = skillsInput.value.toLowerCase().split(/[\s,]+/).filter(t => t.length > 0);
+            
+            const userTags = [...new Set([...interests, ...skills])];
+
+            if (userTags.length === 0) {
+                alert('Please enter at least one interest or skill to run the algorithm!');
+                return;
+            }
+
+            const careerScores = careersData.map(career => {
+                const careerTagsLower = career.tags.map(tag => tag.toLowerCase());
+                let score = 0;
+                
+                userTags.forEach(userTag => {
+                    
+                    if (careerTagsLower.includes(userTag)) {
+                        score += 2;
+                    }
+                   
+                    if (career.category.toLowerCase() === userTag) {
+                        score += 3;
+                    }
+        
+                    if (career.title.toLowerCase().includes(userTag)) {
+                        score += 4;
+                    }
+                });
+                
+                return { ...career, score };
+            });
+
+            const recommendedCareers = careerScores
+                .filter(career => career.score > 0)
+                .sort((a, b) => b.score - a.score)
+                .slice(0, 8); 
+
+            
+            displayCareers(recommendedCareers);
+            recommendationHeading.style.display = 'block';
+            allCareersHeading.style.display = 'none';
+            searchInput.value = '';
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            currentFilter = 'recommendations';
+            
+            
+            careersListSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        
+        function handleSearch(event) {
+            searchTerm = event.target.value.toLowerCase().trim();
+            
+            if (searchTerm) {
+                interestInput.value = '';
+                skillsInput.value = '';
+            }
+            currentFilter = 'all';
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+            filterAndDisplayCareers();
+            recommendationHeading.style.display = 'none';
+            allCareersHeading.style.display = 'block';
+        }
+
+        
+        function handleFilter(event) {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            currentFilter = event.target.dataset.category;
+            searchTerm = '';
+            searchInput.value = '';
+            
+            interestInput.value = '';
+            skillsInput.value = '';
+
+            filterAndDisplayCareers();
+            recommendationHeading.style.display = 'none';
+            allCareersHeading.style.display = 'block';
+        }
+
+        
+        function filterAndDisplayCareers() {
+            let filteredCareers = careersData;
+            
+            if (currentFilter !== 'all' && currentFilter !== 'recommendations') {
+                filteredCareers = filteredCareers.filter(career => career.category === currentFilter);
+            }
+            
+            if (searchTerm) {
+                filteredCareers = filteredCareers.filter(career => {
+                    return career.title.toLowerCase().includes(searchTerm) ||
+                           career.description.toLowerCase().includes(searchTerm) ||
+                           career.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                           career.category.toLowerCase().includes(searchTerm);
+                });
+            }
+            
+            displayCareers(filteredCareers);
+        }
+
+        
+        function displayCareers(careers) {
+            careersContainer.innerHTML = '';
+            
+            if (careers.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            noResults.style.display = 'none';
+            
+            careers.forEach((career, index) => {
+                const careerCard = createCareerCard(career, index);
+                careersContainer.appendChild(careerCard);
+            });
+            
+            setupCardAnimation();
+        }
+
+         
+        function createCareerCard(career, index) {
+            const card = document.createElement('div');
+            card.className = `career-card ${career.category}`;
+            
+            
+            const { primary, rgb } = getCardColor(career.category);
+            card.style.setProperty('--card-color-1', primary);
+            card.style.setProperty('--card-rgb', rgb);
+        
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+
+            card.innerHTML = `
+                <div class="career-card-header">
+                    <span class="career-icon">${career.icon}</span>
+                    <h3>${career.title}</h3>
+                </div>
+                <div class="career-card-body">
+                    <p class="career-description">${career.description}</p>
+                    <div class="career-tags">
+                        ${career.tags.slice(0, 4).map(tag => `<span class="career-tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="salary-range">PAYLOAD: ${career.salaryRange}</div>
+                </div>
+            `;
+            
+            card.addEventListener('click', () => {
+                showCareerDetail(career);
+            });
+            
+            return card;
+        }
+
+        function getCardColor(category) {
+            
+            const colors = {
+                healthcare: { primary: '#f97316', rgb: '249, 115, 22' }, 
+                technology: { primary: '#00e6e6', rgb: '0, 230, 230' }, 
+                business: { primary: '#ff0080', rgb: '255, 0, 128' }, 
+                education: { primary: '#8b5cf6', rgb: '139, 92, 246' }, 
+                engineering: { primary: '#facc15', rgb: '250, 204, 21' }, 
+                creative: { primary: '#ec4899', rgb: '236, 72, 153' } 
+            };
+            
+            return colors[category] || colors.technology;
+        }
+
+        
+        function showCareerDetail(career) {
+            const { primary, rgb } = getCardColor(career.category);
+            
+            const detailHTML = `
+                <button class="back-btn" onclick="hideCareerDetail()">
+                    &lt; EXIT DETAIL VIEW
+                </button>
+                
+                <div class="career-header" style="
+                    --header-color-1: ${primary};
+                    --header-rgb-1: ${rgb};
+                ">
+                    <span class="career-icon" style="color: ${primary};">${career.icon}</span>
+                    <h1>[DATASET: ${career.title}]</h1>
+                    <p>${career.description}</p>
+                    <div class="salary-range" style="color: ${primary};">
+                        ESTIMATED PAYLOAD: ${career.salaryRange}
+                    </div>
+                </div>
+
+                <div class="career-info-grid">
+                    <div class="info-card">
+                        <h3>:: REQUIREMENTS</h3>
+                        <ul>
+                            ${career.requirements.map(req => `<li>${req}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>:: TARGET UNIVERSITY </h3>
+                        <ul>
+                            ${career.universities.map(uni => `<li>${uni}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>:: ENTRY SUBJECTS</h3>
+                        <ul>
+                            ${career.subjects.map(subject => `<li>${subject}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>:: OPERATIONAL PATHWAY</h3>
+                        <ul>
+                            ${career.careerPath.map(step => `<li>${step}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card" style="margin-top: 20px;">
+                    <h3>:: TAGS AND ENVIRONMENT</h3>
+                    <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+                        <div>
+                            <h4>// Keywords</h4>
+                            <div class="career-tags">
+                                ${career.tags.map(tag => `<span class="career-tag" style="border-color: ${primary}; color: ${primary};">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                        <div>
+                            <h4>// Work Sector</h4>
+                            <p style="color: var(--color-text-grey);">${career.workEnvironment}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+        
+            const detailContent = careerDetailSection.querySelector('.detail-content');
+            detailContent.innerHTML = detailHTML;
+            careerDetailSection.style.display = 'block';
+            setTimeout(() => {
+                careerDetailSection.classList.add('active');
+            }, 10);
+            
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        
+        function hideCareerDetail() {
+            careerDetailSection.classList.remove('active');
+            
+            
+            setTimeout(() => {
+                careerDetailSection.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 500); 
+            
+            
+            careersListSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        
+        function setupCardAnimation() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            
+            const cards = document.querySelectorAll('.career-card[style*="opacity: 0"]');
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+        
+        
+        setTimeout(setupCardAnimation, 100); 
+
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && careerDetailSection.classList.contains('active')) {
+                hideCareerDetail();
+            }
+            if (event.key === '/' && !careerDetailSection.classList.contains('active')) {
+                event.preventDefault();
+                searchInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
+   
